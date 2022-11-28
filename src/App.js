@@ -1,4 +1,5 @@
 import Expacne from "./components/Expance/Expance";
+import NewExpance from "./components/NewExpance/NewExpance";
 
 function App() {
   const expenses = [
@@ -22,7 +23,13 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return <Expacne data={expenses} />;
+  return (
+    <div>
+       <NewExpance />
+      <Expacne data={expenses} />
+
+    </div>
+  );
 }
 
 export default App;

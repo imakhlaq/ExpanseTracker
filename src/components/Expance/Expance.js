@@ -1,9 +1,10 @@
 import ExpanceItem from "./ExpanseItem";
 import "./Expance.css";
+import Card from "../UI/Card";
 
 function Expacne(props) {
   return (
-    <div className="expenses">
+    <Card className="expenses">
       <h2>Let's get started!</h2>
       <ExpanceItem
         title={props.data[0].title}
@@ -20,7 +21,7 @@ function Expacne(props) {
         date={props.data[2].date}
         amount={props.data[2].amount}
       />
-    </div>
+    </Card>
   );
 }
 export default Expacne;

@@ -1,4 +1,4 @@
-import Expacne from "./components/Expance";
+import Expacne from "./components/Expance/Expance";
 
 function App() {
   const expenses = [

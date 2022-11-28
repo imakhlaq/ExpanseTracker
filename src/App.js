@@ -1,4 +1,4 @@
-import ExpanceItem from "./components/ExpanseItem";
+import Expacne from "./components/Expance";
 
 function App() {
   const expenses = [
@@ -22,12 +22,7 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      <ExpanceItem></ExpanceItem>
-    </div>
-  );
+  return <Expacne data={expenses} />;
 }
 
 export default App;

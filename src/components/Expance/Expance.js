@@ -3,6 +3,7 @@ import "./Expance.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpanceFilter";
 import ExpancesList from "./ExpancesList";
+import ExpanceChart from "./ExpanceChart";
 
 function Expacne(props) {
   const [filterYear, setYear] = useState("2020");
@@ -20,6 +21,7 @@ function Expacne(props) {
         onYearChange={onYearChangeHandler}
         defaultYear={filterYear}
       />
+      <ExpanceChart expances={filterExpance} />
       <ExpancesList filerExpance={filterExpance} />
     </Card>
   );

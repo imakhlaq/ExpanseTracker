@@ -31,6 +31,10 @@ const ExpanceForm = (props) => {
     setAmt("");
     setTitle("");
   };
+
+  const hideTheForm = () => {
+    props.formState(false);
+  };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -61,6 +65,9 @@ const ExpanceForm = (props) => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expance</button>
+        <button type="button" onClick={hideTheForm}>
+          Cancel
+        </button>
       </div>
     </form>
   );

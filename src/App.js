@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Expacne from "./components/Expance/Expance";
+import ShowForm from "./components/NewExpance/ShowForm";
 import NewExpance from "./components/NewExpance/NewExpance";
 
 const DUMY_EXPANCCE = [
@@ -34,7 +35,7 @@ function App() {
   };
   return (
     <div>
-      <NewExpance ondataRecive={retriveData} />
+      <ShowForm ondataRecived={retriveData} />
 
       <Expacne data={expenses} />
     </div>

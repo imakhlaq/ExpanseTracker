@@ -23,6 +23,8 @@ const ExpanceForm = (props) => {
       amt: enterAmt,
       date: new Date(enterDate),
     };
+    //sending data to NewExpacne
+    props.onFormSubmitData(expanceData);
     //setting value to default
     setDate("");
     setAmt("");

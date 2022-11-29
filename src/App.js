@@ -23,11 +23,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const retriveData = (data) => {
+    console.log(data);
+  };
   return (
     <div>
-       <NewExpance />
+      <NewExpance ondataRecive={retriveData} />
       <Expacne data={expenses} />
-
     </div>
   );
 }

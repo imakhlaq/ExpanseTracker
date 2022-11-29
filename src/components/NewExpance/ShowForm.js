@@ -1,5 +1,6 @@
 import NewExpance from "./NewExpance";
 import { useState } from "react";
+import "./Showform.css";
 
 const ShowForm = (props) => {
   const [isFormShowing, ShowFormInput] = useState(false);
@@ -17,6 +18,12 @@ const ShowForm = (props) => {
     return <NewExpance formState={ShowFormInput} onsubmitdata={retriveData} />;
   }
 
-  return <button onClick={clickHandler}>Show Form</button>;
+  return (
+    <div className="AddNewExpance">
+      <button className="AddNewExpance-btn" onClick={clickHandler}>
+        Add New Expance
+      </button>
+    </div>
+  );
 };
 export default ShowForm;

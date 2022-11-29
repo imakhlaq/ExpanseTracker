@@ -1,0 +1,12 @@
+.AddNewExpance {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.AddNewExpance-btn {
+  padding: 1.2rem 3rem;
+  font-size: 2rem;
+  color: rgb(19, 19, 19);
+  border-radius: 8px;
+  border: none;
+}

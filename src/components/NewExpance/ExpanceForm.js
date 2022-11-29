@@ -14,12 +14,26 @@ const ExpanceForm = (props) => {
   const dateInputHandler = (event) => {
     setDate(event.target.value);
   };
+
+  const submitHandler = (event) => {
+    //recording value
+    event.preventDefault();
+    const expanceData = {
+      title: enterTitle,
+      amt: enterAmt,
+      date: new Date(enterDate),
+    };
+    //setting value to default
+    setDate("");
+    setAmt("");
+    setTitle("");
+  };
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleInputHandler} />
+          <input type="text" value={enterTitle} onChange={titleInputHandler} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -27,6 +41,7 @@ const ExpanceForm = (props) => {
             type="number"
             min="0.01"
             step="0.01"
+            value={enterAmt}
             onChange={amtInputHandler}
           />
         </div>
@@ -34,8 +49,9 @@ const ExpanceForm = (props) => {
           <label>Date</label>
           <input
             type="date"
-            min="2019-01-01"
-            max="2002-12-31"
+            min="2002-12-31"
+            max="2019-01-01"
+            value={enterDate}
             onChange={dateInputHandler}
           />
         </div>

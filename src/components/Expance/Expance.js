@@ -6,6 +6,7 @@ import ExpensesFilter from "./ExpanceFilter";
 
 function Expacne(props) {
   const [filterYear, setYear] = useState("2020");
+  console.log(props);
   const onYearChangeHandler = (choosenyear) => {
     setYear(choosenyear);
   };
@@ -16,21 +17,13 @@ function Expacne(props) {
         onYearChange={onYearChangeHandler}
         defaultYear={filterYear}
       />
-      <ExpanceItem
-        title={props.data[0].title}
-        date={props.data[0].date}
-        amount={props.data[0].amount}
-      />
-      <ExpanceItem
-        title={props.data[1].title}
-        date={props.data[1].date}
-        amount={props.data[1].amount}
-      />
-      <ExpanceItem
-        title={props.data[2].title}
-        date={props.data[2].date}
-        amount={props.data[2].amount}
-      />
+      {props.data.map((expance) => (
+        <ExpanceItem
+          title={expance.title}
+          date={expance.date}
+          amount={expance.amount}
+        />
+      ))}
     </Card>
   );
 }

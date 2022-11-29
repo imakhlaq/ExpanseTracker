@@ -20,8 +20,9 @@ const ExpanceForm = (props) => {
     event.preventDefault();
     const expanceData = {
       title: enterTitle,
-      amt: enterAmt,
+      amount: enterAmt,
       date: new Date(enterDate),
+      id: Math.random(),
     };
     //sending data to NewExpacne
     props.onFormSubmitData(expanceData);

@@ -1,6 +1,7 @@
 import Expacne from "./components/Expance/Expance";
 import NewExpance from "./components/NewExpance/NewExpance";
 
+
 function App() {
   const expenses = [
     {
@@ -30,6 +31,7 @@ function App() {
   return (
     <div>
       <NewExpance ondataRecive={retriveData} />
+
       <Expacne data={expenses} />
     </div>
   );

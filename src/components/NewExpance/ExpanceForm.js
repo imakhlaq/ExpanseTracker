@@ -51,8 +51,8 @@ const ExpanceForm = (props) => {
           <label>Date</label>
           <input
             type="date"
-            min="2002-12-31"
-            max="2019-01-01"
+            min="2019-01-01"
+            max="2022-12-31"
             value={enterDate}
             onChange={dateInputHandler}
           />
